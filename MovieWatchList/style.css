@@ -1,0 +1,204 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    font-family: "Inter", sans-serif; 
+}
+.container{
+    margin: 0 auto;
+    width: 100%;
+}
+header{
+    padding: 0 5em;
+    height: 30vh;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 2em;
+    align-items: center;
+    background-image: url("hero_cropped.jpeg");
+    background-size: cover;
+    background-blend-mode:hue(gray);
+}
+header h1, h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0.1em 0 1em black;
+}
+#search-field{
+    background-color: #2E2E2F;
+    height: 100%;
+    align-self: center;
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.9rem;
+    border: none;
+    color: inherit;
+}
+#search-field:focus{
+    outline: none;
+    
+}
+#search-button{
+    background-color: #4B4B4B;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: none;
+    color: inherit;
+    margin: 0;
+    height: 100%;
+    padding: 1em 2em;
+    border-radius: 0 0.5rem 0.5rem 0;
+    cursor: pointer;
+}
+
+.search-box{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    background-color: #2E2E2F;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    gap: 1em;
+    padding-left: 1em;
+    position: relative;
+    bottom: 1.5rem;
+    right: 0;
+}
+section#empty-search{
+    color: #2E2E2F;
+    text-align: center;
+    margin-top: 10vh;
+    font-size: 1.5rem;
+}
+div.movie{
+    padding: 2rem 0;
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 4em 1fr 1fr;
+    grid-template-rows: auto 1.5rem auto;
+    grid-template-areas: "thumbnail title title title"
+        "thumbnail running-time genres add-to-watchlist"
+        "thumbnail plot plot plot";
+    align-items: center;
+    justify-items: left;
+    border-bottom: 1.5px solid #2C2C2C;
+}
+
+section#empty-search i{
+    font-size: 5rem;
+}
+a, a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+ 
+#watchlist-empty-text p{
+    margin-top: 5rem;
+    color: #787878;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-align: center;
+}
+i.fa-star{
+    color: #FEC654;
+    height: 2em;
+    width: 2em;
+    text-align: center;
+}
+section#watchlist-empty-text h2{
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+div#add-movie-div{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 0.5em;
+}
+.add-button{
+    height: 1rem;
+    width: 1rem;
+}
+div.add-to-watchlist,
+div.remove-watchlist
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    grid-area: add-to-watchlist;
+    cursor: pointer;
+    justify-self: right;
+}
+
+img.movie-thumbnail{
+    height: 160px;
+    grid-area: thumbnail;
+    justify-self: right;
+    margin-right: 1.5em;
+}
+.add-to-watchlist img , 
+.remove-watchlist img{
+    height: 1rem;
+    width: 1rem;
+}
+
+div.movie-title {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+    grid-area: title;
+
+}
+div.movie-title h2{
+    font-size: 1.125rem;
+}
+div.movie-title h3{
+    font-size: 0.75rem;
+}
+p.info{
+    font-size: 0.875rem;
+    font-weight: 400;
+    grid-area: plot;
+    padding-right: 1em;
+    line-height: 1.6em;
+}
+section#loading-section{
+    margin: 5em auto;
+    width: 100%;
+    text-align: center;
+}
+section#loading-section img{
+    width: 25%;
+}
+.no-movie{
+    margin: 4rem auto;
+    text-align: center;
+    color: #787878;
+}
+#confirmation-message{
+    position: fixed;
+    top: 25em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #6a726a;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+
+}
+
+
+.t{
+    margin-top:120px ;
+   text-align: center;
+   font-size: 30px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#loading-section{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+}
